@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Sta {
     int size, top;
     int[] array;
@@ -25,13 +27,25 @@ public class Sta {
         }
     }
 
-    void pop(int item){
+    int pop(){
         int previousTop = top;
         if (isEmpty()){
             System.out.println("Stack is Empty");
         }else {
-            array[top - 1] = item;
             top--;
+            return array[previousTop];
+        }
+        return previousTop;
+    }
+
+    void showArray() {
+        if (isEmpty()) {
+            System.out.println("Stack is empty");
+        }else {
+            for (int a = top; a >= 0; a--) {
+                System.out.println(Arrays.toString(new int[]{array[a]}));
+
+            }
         }
     }
 }

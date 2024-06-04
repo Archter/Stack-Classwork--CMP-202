@@ -16,6 +16,7 @@ public class Main {
 
         stack.isFull();
 
-        stack.pop(3);
+        stack.pop();
+        stack.showArray(); //The arrays are casted to strings before printed.
     }
 }
